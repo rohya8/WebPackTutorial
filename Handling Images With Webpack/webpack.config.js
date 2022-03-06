@@ -1,5 +1,8 @@
 const path = require('path');
 
+/* type: 'asset/resource'      for large files
+type: 'asset/inline'      for small files */
+
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -13,7 +16,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(png|jpg)$/,
-                type: 'asset/resource'
+                type: 'asset/resource'      
             },
             {
                 test: /\.(ttf)$/,
